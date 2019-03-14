@@ -1,11 +1,12 @@
 Simple docker environment for your local projects.
 -------------------
 
-####Which components it containing
+**Which components it containing**
 
 Nginx, PHP7.2+XDebug, Elasticsearch, MySQL, Redis, Node
 
-####How to start
+**How to start**
+
 1. You have to have docker and docker-compose on your local machine.
 2. Clone this project into your work directory.
 3. Make `docker-compose up --build -d` for build the containers.
@@ -14,7 +15,8 @@ Nginx, PHP7.2+XDebug, Elasticsearch, MySQL, Redis, Node
     also you can make alias in tour hosts file for another domain, 
     put your make files into `/public` directory.
 
-####How use Xdebug in PhpStorm
+**How use Xdebug in PhpStorm**
+
 1. After building your containers go to File > Settings > Languages & Frameworks > PHP
     and chose your php-cli container as CLI Interpreter, if there is not it - create new 
     interpreter and chose it from Docker machine.
@@ -25,7 +27,8 @@ Nginx, PHP7.2+XDebug, Elasticsearch, MySQL, Redis, Node
     and enter root path `/var/www`. 
 4. That's all, take brake points and fpm and cli will be work with it
 
-####SSL and HTTPS
+**SSL and HTTPS**
+
 if You want to use https instead http you have to do a few simple steps.
 1. Change param `listen 80;` as `listen 443 ssl` in `docker/nginx/default.conf`.
 2. Add a few parameters into server{} body of file `docker/nginx/default.conf`:
